@@ -2,6 +2,8 @@
 
 ### Welcome
 
+![Banner](https://cdn.discordapp.com/attachments/1295047950497742938/1304053244632240148/meta-og-doc-template.jpg?ex=672dfdb9&is=672cac39&hm=38e9475338619c010c36045b21f4072e6b49744d4f4b456f1ff1669a004dd9b5&)
+
 ---
 
 ### Python Code
