@@ -42,7 +42,7 @@ Check out all the Python libraries!
 const axios = require('axios');
 
 // URL API
-const url = 'https://mikus-api.glitch.me//api/v1/hug';
+const url = 'https://mikus-api.glitch.me/api/v1/hug';
 
 // GET request to the API
 axios.get(url)
