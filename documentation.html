@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<!-- Document title -->
+	<title>API Documentation</title>
+
+	<!-- SEO (optional) -->
+	<meta name="description" content="API Documentation Furry Pictures (nsfw & sfw)">
+	<meta name="author" content="Vadym Ostrovskij">
+	<meta name="robots" content="index, follow"><!-- noindex, nofollow -->
+	<!-- Open Graph: https://ogp.me/ (optional) -->
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="API Documentation">
+	<meta property="og:description" content="API Documentation Furry Pictures (nsfw & sfw)">
+	<meta property="og:site_name" content="API Documentation">
+	<meta property="og:image" content="https://demo.minimalweb.net/documentation-template/assets/img/meta-og-doc-template.jpg"><!-- * Note: Replace with your URL. -->
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+
+	<!-- Website icons (optional) -->
+	<link rel="icon" href="assets/img/doc-favicon-32-32.png" sizes="32x32">
+	<link rel="icon" href="assets/img/doc-favicon-192-192.png" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="assets/img/doc-favicon-180-180.png">
+	<meta name="msapplication-TileImage" content="assets/img/doc-favicon-270-270.png">
+
+	<!-- Google fonts ( https://fonts.google.com/specimen/Open+Sans ) -->
+	<!-- Preconnect -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Open Sans: 300, 300 Italic, 400, 400 Italic, 600, 600 Italic, 700, 700 Italic; CSS: "font-family: 'Open Sans', sans-serif;" -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+	<!-- CSS files -->
+	<link href="assets/css/bootstrap.min.css?ver=3.4.1" rel="stylesheet">
+	<link href="assets/css/bootstrap-theme.min.css?ver=3.4.1" rel="stylesheet">
+	<link href="assets/css/ie10-viewport-bug-workaround.css?ver=3.4.1" rel="stylesheet">
+	<link href="assets/css/font-awesome.min.css?ver=4.7.0" rel="stylesheet">
+	<link href="assets/plugins/prettyPhoto/css/prettyPhoto.css?ver=3.1.6" rel="stylesheet">
+	<link href="assets/css/prism.css?ver=1.29.0" rel="stylesheet">
+	<link href="assets/css/documentation.css?ver=1.0.0" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js?ver=3.7.3"></script>
+		<script src="assets/js/respond.min.js?ver=1.4.2"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<!-- header -->
+<header id="docs-header">
+	<div class="container">
+		<div id="top" class="docs-header-container"><!-- * The #top identifier (id="top") is used for the "Back to top" link -->
+
+			<!-- top nav -->
+			<nav class="docs-header-nav hidden-sm hidden-xs">
+				<ul class="docs-header-navigation list-unstyled">
+					<!-- template name -->
+					<li class="doc-api">
+						<a title="API Documentation">API Documentation</a>
+					</li>
+					<!-- end: template name -->
+					<!-- my site -->
+					<li>
+						<a href="https://discord.gg/UtYvGwFfvx" target="_blank" rel="noopener noreferrer" title="Discord server">Support and questions</a>
+					</li>
+					<!-- end: my site -->
+					<!-- link to Russian version -->
+					<li>
+						<a href="documentation-russian-language.html" title="Документация на Русском языке">На Русском</a>
+					</li>
+					<!-- end: link to Russian version -->
+				</ul>
+			</nav>
+			<!-- end: top nav -->
+
+			<!-- responsive nav: collapse button and template name -->
+			<!-- * this section appears only on small screens (window width less than 992 pixels) -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle responsive-nav-collapse-btn" data-toggle="collapse" data-target="#responsive-nav-collapse"><!-- * data-target = mobile navigation id -->
+					<i class="fa fa-bars"></i>
+				</button>
+				<a href="#template-url" class="navbar-brand hidden-md hidden-lg">API Documentation</a><!-- * template name here -->
+			</div>
+			<!-- end: responsive nav: collapse button and template name -->
+
+			<!-- responsive nav -->
+			<!-- * this navigation appears only on small screens (window width less than 992 pixels) -->
+			<!-- * this navigation is designed for mobile devices (mobile navigation) -->
+			<div id="responsive-nav-collapse" class="collapse navbar-collapse">
+				<nav>
+					<ul class="responsive-nav list-unstyled hidden-md hidden-lg">
+						<li><a href="#section-with-text">Welcome!</a></li>
+						<li><a href="#section-with-image-and-text">Python | Doc</a></li>
+						<li><a href="#section-popup-image">Node.js | Doc</a></li>
+						<li><a href="#section-with-several-images">BDFD | Doc</a></li>
+						<!-- link to Russian version: -->
+						<li><a href="documentation-russian-language.html">Демонстрация на Русском</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- end: responsive nav -->
+
+		</div>
+	</div>
+</header>
+<!-- end: header -->
+
+<!-- documentation heading -->
+<section id="docs-heading-section">
+	<div class="container">
+		<div class="docs-heading-container">
+
+			<!-- title for documentation: -->
+			<h1>API Documentation - Documentation</h1><!-- * template name here -->
+
+			<!-- short description: -->
+			<p>Welcome! Thanks to this <a href="https://github.com/alexey-trofimov/documentation-template" target="_blank" rel="noopener noreferrer" title="Link to Author Github" class="fw-600">author</a> I was able to make a "Mini Documentation" of the Furry API.</p>
+
+		</div>
+	</div>
+</section>
+<!-- end: documentation heading -->
+
+<!-- content -->
+<section id="docs-content-section">
+	<div class="container">
+		<div class="docs-content-container">
+			<div class="row">
+
+				<!-- sidebar nav -->
+				<div class="col-md-3" role="complementary">
+					<nav id="sidebar-scrollspy-nav" class="hidden-sm hidden-xs">
+						<ul id="sidebar-nav" class="nav sidebar-navigation list-unstyled">
+							<li><a href="#section-with-text">Welcome</a></li>
+							<li><a href="#section-with-image-and-text">Python | Doc</a></li>
+							<li><a href="#section-popup-image">Node.js | Doc</a></li>
+							<li><a href="#section-with-several-images">BDFD | Doc</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- end: sidebar nav -->
+
+				<!-- documentation content -->
+				<div class="col-md-9" role="main">
+					<div class="content">
+
+						<!-- ================= MAIN CONTENT STARTS HERE ================= -->
+
+						<!-- * Each block must have an identifier that will be used in navigation -->
+
+						<!-- section with text -->
+						<div id="section-with-text"><!-- * ID for navigation -->
+
+							<!-- content section -->
+							<div class="content-section">
+								<!-- title: -->
+								<h2 class="content-section-heading ta-center">Welcome dude</h2>
+								<!-- paragraphs: -->
+								<p>Welcome to this site! the site will be updated manually if you see an error or nsfw in sfw Commands, please contact Support. This documentation is only a small base for the <strong><a href="https://discord.gg/UtYvGwFfvx">#ChillRoom [AI]</a></strong> Server, but you can also use it.
+The site and APi was created by a not very experienced developer, so please forgive me if this API is very leaky and with many errors</p>
+							</div>
+							<!-- end: content section -->
+
+						</div>
+						<!-- end: section with text -->
+
+						<!-- section with image and text -->
+						<div id="section-with-image-and-text"><!-- * ID for navigation -->
+
+							<!-- content section -->
+							<div class="content-section">
+								<!-- title: -->
+								<h2 class="content-section-heading ta-center">Python Code</h2>
+								<p><pre class="mb-25 line-numbers"><code class="language-py">import requests
+import random
+
+# URL API
+url = 'https://mikus-api.glitch.me/api/v1/hug'
+
+# GET request to the API
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    
+    # Get all image URLs
+    images = data.get('results', [])
+    
+    if images:
+        # Choose a random image
+        random_image = random.choice(images)
+        print('Huggy Random Furry image:', random_image['url'])
+    else:
+        print('Furry hugs not Found :C')
+else:
+    print('Failed to get data from API:', response.status_code)
+</code></pre></p>
+
+<li class="list-group-item list-group-item-info">Check out all the Python libraries!</li>
+							</div>
+							<!-- end: content section -->
+
+						</div>
+						<!-- end: section with image and text -->
+
+						<!-- popup image (prettyPhoto) -->
+						<div id="section-popup-image"><!-- * ID for navigation -->
+
+							<!-- content section -->
+							<div class="content-section">
+								<!-- title: -->
+								<h2 class="content-section-heading ta-center">Node.js</h2>
+								<p><pre class="mb-25 line-numbers"><code class="language-javascript">const axios = require('axios');
+
+// URL API
+const url = 'https://mikus-api.glitch.me//api/v1/hug';
+
+// GET request to the API
+axios.get(url)
+  .then(response => {
+    const data = response.data;
+    const images = data.results;
+
+    if (images.length > 0) {
+      // Choose a random image
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      console.log('Huggy Random Furry image', randomImage.url);
+    } else {
+      console.log('Furry hugs not Found :C');
+    }
+  })
+  .catch(error => {
+    console.log('ops error API:', error);
+  });
+</code></pre></p>
+<li class="list-group-item list-group-item-info">Make sure to install the "axios" library.</li>
+
+							</div>
+							
+							
+							
+							<!-- end: content section -->
+
+						</div>
+						<!-- end: popup image (prettyPhoto) -->
+
+						<!-- section with several images -->
+						<div id="section-with-several-images"><!-- * ID for navigation -->
+
+							<!-- content section -->
+							<div class="content-section">
+								<!-- title: -->
+								<h2 class="content-section-heading ta-center">BDFD (Bot Designer For Discord)</h2>
+								<p><pre class="mb-25 line-numbers"><code class="language-javascript">$nomention
+<@$authorID> hug $message[1]
+$httpGet[https://mikus-api.glitch.me/api/v1/hug]
+$image[$httpResult[results;0;url];yes;yes]]
+</code></pre></p>
+<li class="list-group-item list-group-item-info">Use BDScript 2 for accurate and reliable commands.</li>
+
+
+</div>
+							<!-- end: content section -->
+
+						</div>
+						<!-- end: section with several images -->
+
+						<!-- simple notification: -->
+						<div class="alert alert-success mt-65 mb-65" role="alert">
+							Everything you see or learn here has been written by Artificial Intelligence (AI)!
+						</div>
+
+						<!-- ================= MAIN CONTENT ENDS HERE ================= -->
+
+					</div><!-- /.content -->
+				</div>
+				<!-- end: documentation content -->
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end: content -->
+
+<!-- footer -->
+<footer id="docs-footer">
+	<div class="container">
+		<div class="docs-footer-container">
+			<p><i class="fa fa-copyright"></i> Thanks to the author <a href="https://minimalweb.net/">Alexey Trofimov</a> for the <a href="https://github.com/alexey-trofimov/documentation-template/tree/main">template</a> | Created in 2024.</p>
+		</div>
+	</div>
+</footer>
+<!-- end: footer -->
+
+<!-- JS files
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js?ver=1.12.4"></script>
+<script src="assets/js/bootstrap.min.js?ver=3.4.1"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js?ver=3.4.1"></script>
+<script src="assets/plugins/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.1.6"></script>
+<script src="assets/js/prism.js?ver=1.29.0"></script>
+<script src="assets/js/documentation.js?ver=1.0.0"></script>
+</body>
+</html>
