@@ -2,8 +2,7 @@
   "name": "api-github-oi",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build"
+    "dev": "vercel dev"
   },
   "dependencies": {
     "fs": "0.0.1-security",
