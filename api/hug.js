@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = async (req, res) => {
     const baseUrl = "https://raw.githubusercontent.com/mikus-furry/api.github.oi/main/assets/img/";
 
-    const folderPath = path.join(process.cwd(), 'assets/img/hug');
+    const folderPath = path.join(process.cwd(), 'assets/img/hug/');
 
     const results = [];
 
