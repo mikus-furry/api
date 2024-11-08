@@ -183,9 +183,8 @@
 							<!-- content section -->
 							<div class="content-section">
 								<!-- title: -->
-								<h2 class="content-section-heading ta-center">Python Code</h2>
+								<h2 class="content-section-heading ta-center">Python Код</h2>
 								<p><pre class="mb-25 line-numbers"><code class="language-py">import requests
-import random
 
 # URL-адрес API
 url = 'https://mikus-api.glitch.me/api/v1/hug'
@@ -196,15 +195,14 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
     
-    # Получить URL-адреса всех изображений
-    images = data.get('results', [])
+    # Получить URL-адрес изображения
+    image_url = data.get('imageUrl', None)
     
-    if images:
-        # Выбрать случайное изображение
-        random_image = random.choice(images)
-        print('Случайное изображение фурри-обнимашек:', random_image['url'])
+    if image_url:
+        print('Случайное изображение фурри-обнимашек:')
+        print(image_url)
     else:
-        print('Фурри-обнимашки не найдены :C')
+        print('Фурри-обнимашки не найдены :C'')
 else:
     print('Не удалось получить данные от API:', response.status_code)
 </code></pre></p>
@@ -217,33 +215,35 @@ else:
 						<!-- end: section with image and text -->
 
 						<!-- popup image (prettyPhoto) -->
-						<div id="section-popup-image"><!-- * ID for navigation -->
+						<div id="section-node"><!-- * ID for navigation -->
 
 							<!-- content section -->
 							<div class="content-section">
 								<!-- title: -->
-								<h2 class="content-section-heading ta-center">Node.js</h2>
+								<h2 class="content-section-heading ta-center">Node.js Код</h2>
 								<p><pre class="mb-25 line-numbers"><code class="language-javascript">const axios = require('axios');
 
 // URL-адрес API
-const url = 'https://mikus-api.glitch.me//api/v1/hug';
+const url = 'https://mikus-api.glitch.me/api/v1/hug'; // Заміни на потрібний URL
 
 // Получить запрос к API
 axios.get(url)
   .then(response => {
+    // Get data from the response
     const data = response.data;
-    const images = data.results;
 
-    if (images.length > 0) {
-      // Выбрать случайное изображение
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      console.log('Случайное изображение фурри-обнимашек', randomImage.url);
+    // Выбор случайной картинки
+    const imageUrl = data.imageUrl;
+
+    if (imageUrl) {
+      console.log('Случайное изображение фурри-обнимашек:');
+      console.log(imageUrl);
     } else {
       console.log('Фурри-обнимашки не найдены :C');
     }
   })
   .catch(error => {
-    console.log('Упс, ошибка API:', error);
+    console.error('Упс, ошибка API:', error.response ? error.response.status : error.message);
   });
 </code></pre></p>
 <li class="list-group-item list-group-item-info">Убедитесь, что установлена библиотека "axios".</li>
