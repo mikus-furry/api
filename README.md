@@ -10,7 +10,6 @@
 
 ```python
 import requests
-import random
 
 # URL API
 url = 'https://mikus-api.glitch.me/api/v1/hug'
@@ -22,12 +21,11 @@ if response.status_code == 200:
     data = response.json()
     
     # Get all image URLs
-    images = data.get('results', [])
+    image_url = data.get('imageUrl', None)
     
-    if images:
-        # Choose a random image
-        random_image = random.choice(images)
-        print('Huggy Random Furry image:', random_image['url'])
+    if image_url:
+        print('Huggy Random Furry image:')
+        print(image_url)
     else:
         print('Furry hugs not Found :C')
 else:
@@ -44,25 +42,28 @@ Check out all the Python libraries!
 const axios = require('axios');
 
 // URL API
-const url = 'https://mikus-api.glitch.me/api/v1/hug';
+const url = 'https://mikus-api.glitch.me/api/v1/hug'; // Заміни на потрібний URL
 
 // GET request to the API
 axios.get(url)
   .then(response => {
+    // Get data from the response
     const data = response.data;
-    const images = data.results;
 
-    if (images.length > 0) {
-      // Choose a random image
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      console.log('Huggy Random Furry image', randomImage.url);
+    // Get the URL of the image
+    const imageUrl = data.imageUrl;
+
+    if (imageUrl) {
+      console.log('Huggy Random Furry image:');
+      console.log(imageUrl);
     } else {
       console.log('Furry hugs not Found :C');
     }
   })
   .catch(error => {
-    console.log('ops error API:', error);
+    console.error('Failed to get data from API:', error.response ? error.response.status : error.message);
   });
+
 ```
 
 Make sure to install the **"axios"** library.
@@ -75,7 +76,7 @@ Make sure to install the **"axios"** library.
 $nomention
 <@$authorID> hug $message[1]
 $httpGet[https://mikus-api.glitch.me/api/v1/hug]
-$image[$httpResult[results;0;url];yes;yes]]
+$image[$httpResult[imageUrl;0;url];yes;yes]]
 ```
 
 Use **BDScript 2** for accurate and reliable commands.
