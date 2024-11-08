@@ -184,7 +184,6 @@ The site and APi was created by a not very experienced developer, so please forg
 								<!-- title: -->
 								<h2 class="content-section-heading ta-center">Python Code</h2>
 								<p><pre class="mb-25 line-numbers"><code class="language-py">import requests
-import random
 
 # URL API
 url = 'https://mikus-api.glitch.me/api/v1/hug'
@@ -196,12 +195,11 @@ if response.status_code == 200:
     data = response.json()
     
     # Get all image URLs
-    images = data.get('results', [])
+    image_url = data.get('imageUrl', None)
     
-    if images:
-        # Choose a random image
-        random_image = random.choice(images)
-        print('Huggy Random Furry image:', random_image['url'])
+    if image_url:
+        print('Huggy Random Furry image:')
+        print(image_url)
     else:
         print('Furry hugs not Found :C')
 else:
@@ -225,24 +223,26 @@ else:
 								<p><pre class="mb-25 line-numbers"><code class="language-javascript">const axios = require('axios');
 
 // URL API
-const url = 'https://mikus-api.glitch.me/api/v1/hug';
+const url = 'https://mikus-api.glitch.me/api/v1/hug'; // Заміни на потрібний URL
 
 // GET request to the API
 axios.get(url)
   .then(response => {
+    // Get data from the response
     const data = response.data;
-    const images = data.results;
 
-    if (images.length > 0) {
-      // Choose a random image
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      console.log('Huggy Random Furry image', randomImage.url);
+    // Get the URL of the image
+    const imageUrl = data.imageUrl;
+
+    if (imageUrl) {
+      console.log('Huggy Random Furry image:');
+      console.log(imageUrl);
     } else {
       console.log('Furry hugs not Found :C');
     }
   })
   .catch(error => {
-    console.log('ops error API:', error);
+    console.error('Failed to get data from API:', error.response ? error.response.status : error.message);
   });
 </code></pre></p>
 <li class="list-group-item list-group-item-info">Make sure to install the "axios" library.</li>
@@ -266,7 +266,7 @@ axios.get(url)
 								<p><pre class="mb-25 line-numbers"><code class="language-javascript">$nomention
 <@$authorID> hug $message[1]
 $httpGet[https://mikus-api.glitch.me/api/v1/hug]
-$image[$httpResult[results;0;url];yes;yes]]
+$image[$httpResult[imageUrl;0;url];yes;yes]]
 </code></pre></p>
 <li class="list-group-item list-group-item-info">Use BDScript 2 for accurate and reliable commands.</li>
 
