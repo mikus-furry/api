@@ -76,7 +76,7 @@ Make sure to install the **"axios"** library.
 $nomention
 <@$authorID> hug $message[1]
 $httpGet[https://mikus-api.glitch.me/api/v1/hug]
-$image[$httpResult[imageUrl;0;url];yes;yes]]
+$image[$httpResult[imageUrl]]
 ```
 
 Use **BDScript 2** for accurate and reliable commands.
