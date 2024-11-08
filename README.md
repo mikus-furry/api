@@ -20,7 +20,7 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
     
-    # Get all image URLs
+    # Get image URL
     image_url = data.get('imageUrl', None)
     
     if image_url:
